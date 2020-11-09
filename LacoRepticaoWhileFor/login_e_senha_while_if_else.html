@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+<script>
+
+    var loginCadastrado = "bruno.pcastro@sp.senac.br"; //variável onde possivelmente em produção buscara no banco de dados.
+    var senhaCadastrada = "C@sa1020"; // variável onde possivelmente em produção buscará no banco de dados.
+
+    var maximoTentativas = 3; // variável que declara o máximo de tentativas
+    var tentativaAtual = 1; // a partir do momento que for iserido os dados, ja contabiliza 1 tentativa, portanto o parâmetro é 1.
+
+    while(tentativaAtual <= maximoTentativas){ //parâmetro de repetição onde será comparado a quantidade de tentativas incorretas de acesso
+
+    var loginInformado = prompt("Informe seu login"); // usuário irá inserir seu login e terá que ser == o encontrado no BD
+    var senhaInformada = prompt("Informe sua senha"); // usuário irá inserir sua senha e terá que ser == a encontrada no BD
+
+    if( loginCadastrado == loginInformado && senhaCadastrada == senhaInformada ) { // condição que irá verificar se o login cadastrado e senha cadastra é = BD
+
+        alert("Bem-vindo ao sistema " + loginInformado); // se for == será exibida esta mensagem.
+        tentativaAtual = maximoTentativas; // este parâmetro indica que atingiu o máximo de tentativas, ou seja, tentativaAtual será = ao maximo Tentativas
+    
+    }else { // condição que irá exibir se for diferente do login e senha
+    	
+    	if(tentativaAtual == maximoTentativas){  // parâmetro usado para determinar o máximo ou poderia subtituir maximoTentativas por 3
+        alert("numero de tentativas ultrapassado"); //laço de repetição encerrado, pois atingiu o máximo
+    }else {
+    	alert("Login inválido. Tente novamente"); // looping será ativado por 3 vezes
+    }
+}
+     tentativaAtual = tentativaAtual +1  // parâmetro para encerrar o laço de repetição, após 3 tentativas será = 4, ou seja, diferente de 3(máximo)
+}
+
+</script>

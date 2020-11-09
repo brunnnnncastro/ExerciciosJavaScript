@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+
+        document.write(frase);
+        pulaLinha();
+    }
+// inserir estrelas de acordo com a quantidade de linhas e estrelas 
+    for(var linha = 1; linha <= 10; linha++) { // repetição que criará a quantidade de linhas
+
+        for(var coluna = 1; coluna <= 10; coluna++) { //condição para que seja acrescentado as estrelas em cada coluna
+            document.write("*");
+        }
+        pulaLinha();
+    }
+
+</script>

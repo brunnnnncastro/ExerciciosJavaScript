@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        //nesse parametro, se pula duas linhas
+        document.write("<br>");
+        document.write("<br>");
+}
+
+    function mostra(frase) {
+        //nesse parametro ativa o exibir na tela apenas com 1 parametro
+        document.write(frase);
+        pulaLinha();
+}
+ //função que calcula dois parametros mediante a virgula
+    function calculaImc(altura, peso) {
+
+// o return vai realizar a operação matematica do IMC e retornar a operação para a função
+        return peso / (altura * altura);
+}
+// variaveis de entrada de dados para guardar em suas respectivas variáveis, com a resalva da concatenação da string nome, para ser exibido no próximo prompt
+var nome = prompt("Informe o seu nome");
+var alturaInformada = prompt(nome + ", informe sua altura");
+var pesoInformado = prompt(nome + ", informe seu peso");
+// na variavel abaixo, calculará respectivamente mediante ao parêmtro estabelecido na função
+var imc = calculaImc(alturaInformada, pesoInformado);
+// exibirá na tela o RESULTADO do código
+mostra(nome + ", o seu IMC é " + imc);
+
+//condição simples
+if (imc < 18.5) {
+        mostra("Você está abaixo do recomendado")
+}
+//condição simples
+if (imc > 35){
+    
+    mostra("Você está acima do recomendado ");
+
+}
+//condição que retórna dois comparativos
+   if(imc >= 18.5 && imc <= 35) {
+
+    mostra("Seu IMC está excelente!");
+
+}
+</script>

@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia() {
+
+        return Math.round(Math.random() * 100); // round = arredondamento & .randon sorteio de número entre o parâmetro
+    }   
+
+    var numeroPensado = sorteia(); // processará no back-end o número sorteado
+
+    var chute = parseInt(prompt("Já pensei. Qual você acha que é?")); //receberá uma string como número, e usaremos parseInt para converter o numero tipo string em número
+
+    // esta condição nos mostrará se for acertado o numero e caso não seja acertado, ambos serão notificados true or false;
+    
+    if(chute == numeroPensado) { 
+
+        mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado); // se acertar, será apresentado essa mensagem
+    } else { // se for falso da condição if, irá exibir a mensagem abaixo, com uma condição, terá um limite de erros
+
+        var contador = 1; // paramêtro de contagem da repetição
+        var contagem = 3; // contará a mensagem que será exibida variando com a quantidade de tentativas
+        var tentativas = 3; // parâmetro para para o looping
+        while( contador <= tentativas) { // dentro do false, caso o contador seja <= 10, será exibida a mensagem de erro
+            alert("Já era, você errou! você tem mais " + contagem + " tentativas ");
+            parseInt(prompt("Insira novamente o chute: "));
+            contador++;
+            contagem = contagem - 1;
+        }
+    alert ("Você atingiu o máximo de tentativas");
+    }
+</script>

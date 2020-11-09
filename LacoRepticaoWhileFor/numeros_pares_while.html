@@ -1,0 +1,24 @@
+<meta charset="UFT-8">
+
+<script>	
+	function pulaLinha(){
+
+	document.write("<br><br>");
+}
+	function mostra(frase){
+	document.write(frase);
+	pulaLinha()
+}
+ 
+ 
+ // Este problema tem como objetivo imprimir na tela de forma repetitiva os numeros pares de um número declarado na condição
+  var contador = 2; // variável que indica o número que será realizado a contagem, neste caso, como o numero par começa com 2, ele mais 2 sucessivamente até o limite da condição será exibido
+
+//na condição abaixo entra o laço de repetição onde enquanto a parâmetro (var) for true(verdadeiro) <= 100, o laço de repetição será exibido
+        while( contador <= 100 ) {
+
+            mostra("os numeros pares de 0 a 100 são " + contador); // dentro do looping temos o que será mostrado caso seja true, ou seja, o valor dentro da variável contador (2)
+            contador = contador + 2; // este incremento será acrescentado na contagem dos pares, ou seja contador será igual contador + 2, que será igual a 4, onde ao voltar para a condição, o valor da variável começará com 4 e assim até atingir a condição <=100
+        }  
+      mostra("FIM");
+  </script>

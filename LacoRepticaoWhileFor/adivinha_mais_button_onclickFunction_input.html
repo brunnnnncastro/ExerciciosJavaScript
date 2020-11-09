@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<input/> <!-- este cara irá criar uma entrada de dados -->
+<button>Compare com o meu segredo</button> <!-- esta tag receberá um botão, com um nome-->
+
+<script>
+// neste cenário, faremos a comparação entre o número inserido com o adivinhado apenas quando for clicado no botão    
+    var segredo = 5; // variável com o segredo já definido
+    var input = document.querySelector("input"); // a váriavel input, irá receber o valor que foi informado no html
+    input.focus();
+function verifica(){ // nesta função, irá verificar se o valor no input é true ou false com um if else simples
+    if(input.value == segredo){
+        alert("Você Acertou");
+    } else{
+         
+        alert("Você Errou!");
+    }
+        input.valu = "";
+        input.focus();
+}
+    
+    var button = document.querySelector("button");
+    button.onclick = verifica;
+
+
+</script> 

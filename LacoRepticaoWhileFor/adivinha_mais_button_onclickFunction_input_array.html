@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+
+<input/><!-- recebera uma caixa de entrada de dados-->
+<button>Compare com o meu segredo</button> <!-- receberá um botão-->
+
+<script>
+
+    var segredos = [5,7,10,2,3]; // foi criado um array [] com 5 parâmetros
+
+    var input = document.querySelector("input"); // variável com o nome de input, que receberá o valor inserido no input
+        input.focus(); // chamada para dar foco no input
+
+    function verifica() { // função que ao ser chamada, será executada
+
+            var achou = false;
+            var posicao = 0
+            
+            for(posicao; posicao < segredos.length; posicao++) { // a variável posição 0 foi criada para que seja o parâmetro de análise das casas do array / segredos.length tem como função trazer de forma simples os valores presentes no array na variável
+
+                if(input.value == segredos[posicao]) { // condição de comparação se o valor inserido no input é == ao segredo do array
+ 
+                    alert("Você ACERTOU!");
+                    achou = true;
+                    break;
+        } 
+            }
+
+                                if(achou == false) {
+
+                                    alert("Você ERROU!");
+                                }
+
+                                input.value = "";
+                input.focus();
+
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+</script>

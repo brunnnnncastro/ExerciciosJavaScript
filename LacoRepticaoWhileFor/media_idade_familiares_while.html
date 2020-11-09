@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+
+<script>
+	
+function pulaLinha(){
+
+document.write ("<br><br>")
+
+}
+
+function mostra(frase){
+
+	document.write(frase);
+	pulaLinha();
+}
+
+// lógica para solicitar a quantidade de familiares e calcular a sua média que irá variar de acordo com a quantidade de pessoas
+
+var totalFamiliares = parseInt(prompt("Digite a quantidade de familiares")); // esta varíavel é parâmetro para executar o looping e ser a condição de repetição
+var contadordeFamiliares = 1; // esta variável é parâmetro para ser a condição de contagem do looping, onde será o limitador da contagem
+var somaIdades = 0; // onde será armazenada a soma das idades recebidas dentro do laço
+while(contadordeFamiliares <= totalFamiliares){ // condição de looping onde irá executar a repetição de acordo com a quantidade de familiares 
+	
+	var idade = parseInt(prompt("Insira a idade do familiar")); // quantidade de dados de acordo com o numero de familiares
+	contadordeFamiliares++;	 // incremento do contador que será o limitador <= a quantidade de familiares que varia
+	somaIdades = somaIdades + idade; // recebe a soma das idades dos familiares e armazena na variavel somaIdades para ser calculada a média
+}
+
+// Após a condição do looping for false (>totalFamiliares) sairá do looping e irá executar o calculo abaixo
+var mediadasIdades = somaIdades / totalFamiliares; // a media das idades é inserida aqui porque se fosse inserida antes do looping a somaIdades teria o valor já determinado, ou seja, sempre seria =0;
+mostra("a media das idades é " + mediadasIdades);
+mostra ("FIM");
+</script>

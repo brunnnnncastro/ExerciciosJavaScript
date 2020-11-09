@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+
+<script>
+    function pulaLinha(){
+
+        document.write("<br><br>");
+
+    }
+        function mostra(frase){
+
+            document.write(frase);
+            pulaLinha();
+        }
+
+        var multiplicador = parseInt(prompt("Digite o multiplicador"));
+        var limite = parseInt(prompt("Digite o limite de multiplos"));
+        var contador = 0;
+        var contaLopop = 0;
+        while(contador <=limite){
+            mostra(multiplicador + " x " + contador + " = " + (multiplicador * contador));
+            contador++;
+        }
+
+</script>

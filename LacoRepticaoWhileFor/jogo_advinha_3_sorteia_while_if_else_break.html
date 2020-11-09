@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function sorteia() { // função que irá sortear o número
+
+        return Math.round(Math.random() * 10); // o retun indica que o valor será atribuído a função sorteia que ao ser chamada, será sorteado o número parametrizado *
+    }   
+
+    var numeroPensado = sorteia();
+    var limite = 3;
+    var tentativas = 1;
+    while(tentativas <= limite){
+         var chute = parseInt(prompt("Digite seu chute"));
+        if(chute == numeroPensado) {
+
+        mostra("Você ACERTOU, o número pensado era " + numeroPensado);
+        break;
+
+    } else {
+
+        alert ("Você ERROU!");
+    }
+
+    tentativas++;
+}
+
+mostra("FIM");
+</script>

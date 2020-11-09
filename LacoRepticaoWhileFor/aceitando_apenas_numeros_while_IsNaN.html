@@ -1,0 +1,19 @@
+<metar charset = "UTF-8">
+
+<script>
+	var idade = parseInt(prompt("Digite sua idade"));
+	contador = 1;
+	limite = 3;
+
+	while( isNaN (idade)){
+	if ( contador <= limite){
+	idade = parseInt(prompt("Digite corretamente sua idade"));		
+	contador++;
+	}	
+	if  (contador == limite){
+	alert ("Os dados inseridos não correspondem com números, por gentileza, tente novamente inserindo apenas NÚMEROS.");	
+	contador = 0;	
+		} 
+	}		
+	alert(idade);
+</script>

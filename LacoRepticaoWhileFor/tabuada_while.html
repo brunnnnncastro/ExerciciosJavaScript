@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>	
+	function pulaLinha(){
+
+		document.write("<br><br>");
+
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+}
+
+
+//programa que irá ler a tabuada já determinada
+
+		var multiplicador = 1; // declaração da variável
+		var tabuada = parseInt(prompt("Insira a tabuada")); // declaração da variável
+		var tabuadax = parseInt(prompt("Insira o limite de multiplicações"));
+		while(multiplicador <=tabuadax){ // em while, a condição é com a variável declarada + a condição de saída do looping caso seja false
+
+			mostra(tabuada* multiplicador);
+			multiplicador++;
+		}
+
+		mostra("FIM");
+
+	</script>

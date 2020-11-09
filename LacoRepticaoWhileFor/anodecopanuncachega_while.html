@@ -1,0 +1,26 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+    }
+
+    // irá exibir na tela um programa que receba um ano e mostrará os anos que tivemos copa
+    var anoCopa = 1930; // ano da primeira copa do mundo
+    var limite = parseInt(prompt("Qual é o ano limite?")); // variável de entrada de dados
+
+    while(anoCopa <= limite) { // looping que irá exibir os anos de copa que aconteceram até o ano que foi inserido de entrada
+       
+         mostra(anoCopa + " tem copa!");   
+         anoCopa = anoCopa + 4; // incremento de contagem de +4, siguinifica que somará sempre o valor até chegar na condição
+}
+    mostra("Ufa! Esses foram os anos de copa até " + limite); // após o laço, será exibida esta mensagem 
+
+</script>

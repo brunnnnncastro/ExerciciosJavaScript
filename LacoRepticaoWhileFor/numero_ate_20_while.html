@@ -1,0 +1,22 @@
+<meta charset="UTF-8">
+// código para que seja mostra de 0 a 20 de forma decrescente
+
+<script>
+	function pulaLinha(){
+	document.write("<br><br>");	
+	}
+	function mostra(frase){
+		document.write(frase)
+		pulaLinha();
+	}
+	var contador = 20;
+	while ( contador>=0){
+
+	mostra(contador);	
+	contador = contador -1; //após o looping o contador sempre será -1, ou seja 20 - 1 = 19, sendo assim até ser =0 e parará a contagem
+
+	}
+
+mostra("FIM");
+
+</script>

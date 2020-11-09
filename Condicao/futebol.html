@@ -1,0 +1,29 @@
+<meta charset="UTF-8">
+
+<script>
+function pulaLinha(){
+document.write("<br>");
+}
+function mostra(frase){
+
+	document.write(frase);
+	pulaLinha()
+}
+
+var vitorias = parseInt (prompt("Insira a quantidade de vitórias nessa temporada"));
+var empates = parseInt (prompt("Insira a quantidade de empates nessa temporada"));	
+var derrotas = parseInt(prompt("Insira a quantidade de derrotas nessa temporada"));
+var pontos = (vitorias * 3) + empates + (derrotas * 0);
+	mostra("A quantidade total de pontos feitos nessa temporada foi: " + pontos);
+if( pontos >42){
+	mostra("A quantidade de pontos foi MAIOR que a temporada passada");
+}
+if(pontos<=41){
+	mostra("A quantidade de pontos foi MENOR que a temporada passada");
+}
+if (pontos==42) {
+
+	mostra("A quantidade de ponto foi IGUAL a temporada passada");
+}
+mostra("FIM");
+</script>
